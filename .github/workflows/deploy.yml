@@ -27,5 +27,5 @@ jobs:
 
       - name:  deploy file to server
         run: |
-          scp -P {{env.PORT}} -r GITHUB_WORKSPACE/public/* {{env.USERNAME}}@{{env.HOST}}:/var/www/weekly/
+          scp -P ${{ env.PORT }} -r GITHUB_WORKSPACE/public/* ${{ env.USERNAME }}@${{ env.HOST }}:/var/www/weekly/
 
